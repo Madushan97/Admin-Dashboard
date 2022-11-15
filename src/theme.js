@@ -2,7 +2,7 @@
 //  light and dark mode
 
 import { createContext, useState, useMemo } from 'react'
-import { createTheme } from '@mui/material'
+import { createTheme } from '@mui/material/styles'
 
 // color design tokens
 export const tokens = (mode) => ({
@@ -215,5 +215,5 @@ export const useMode = () => {
 
     const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
 
-    return [colorMode, theme]
+    return [theme, colorMode]
 }
